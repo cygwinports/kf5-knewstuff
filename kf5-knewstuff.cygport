@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-knewstuff"
-VERSION=5.27.0
+VERSION=5.35.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 collaborative data sharing library"
@@ -12,6 +12,8 @@ specification."
 PKG_NAMES="libKF5NewStuff5 libKF5NewStuff-devel"
 libKF5NewStuff5_CONTENTS="
 	usr/bin/cygKF5NewStuff-5.dll
+	usr/bin/cygKF5NewStuffCore-5.dll
+	${QT5_QMLDIR#/}/org/kde/newstuff/
 	usr/share/doc/
 	usr/share/kf5/kmoretools/
 	usr/share/kf5/knewstuff/
@@ -20,8 +22,12 @@ libKF5NewStuff5_CONTENTS="
 libKF5NewStuff_devel_REQUIRES="libKF5Archive-devel libKF5Attica-devel libKF5Completion-devel libKF5I18n-devel libKF5IconThemes-devel libKF5ItemViews-devel libKF5KIO-devel libKF5Service-devel libKF5TextWidgets-devel libKF5XmlGui-devel libQt5Core-devel libQt5Gui-devel"
 libKF5NewStuff_devel_CONTENTS="
 	usr/include/KF5/KNewStuff3/
-	usr/include/KF5/knewstuff_version.h
+	usr/include/KF5/knewstuff*_version.h
 	usr/lib/cmake/KF5NewStuff/
+	usr/lib/cmake/KF5NewStuffCore/
+	usr/lib/cmake/KF5NewStuffQuick/
 	${QT5_MKSPECSDIR#/}/modules/qt_KNewStuff.pri
+	${QT5_MKSPECSDIR#/}/modules/qt_KNewStuffCore.pri
 	usr/lib/libKF5NewStuff.dll.a
+	usr/lib/libKF5NewStuffCore.dll.a
 "
