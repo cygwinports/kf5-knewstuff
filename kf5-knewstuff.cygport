@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-knewstuff"
-VERSION=5.35.0
+VERSION=5.39.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 collaborative data sharing library"
@@ -11,6 +11,7 @@ specification."
 
 PKG_NAMES="libKF5NewStuff5 libKF5NewStuff-devel"
 libKF5NewStuff5_CONTENTS="
+	etc/xdg/knewstuff.categories
 	usr/bin/cygKF5NewStuff-5.dll
 	usr/bin/cygKF5NewStuffCore-5.dll
 	${QT5_QMLDIR#/}/org/kde/newstuff/
